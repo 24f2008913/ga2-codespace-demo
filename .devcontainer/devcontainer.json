@@ -1,17 +1,12 @@
 {
     "name": "ga2-21e165",
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
-    "features": {
-        "ghcr.io/devcontainers/features/python:1": {}
-    },
+    "image": "python:3.11-slim",
     "customizations": {
         "vscode": {
             "extensions": [
-                "astral-sh.uv",
                 "ms-python.python"
             ]
         }
     },
-    "postCreateCommand": "uv pip install fastapi",
-    "remoteUser": "codespace"
+    "postCreateCommand": "pip install fastapi uvicorn[standard]"
 }
